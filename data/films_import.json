@@ -1,0 +1,19 @@
+[
+  {"title": "Inception", "director": "Christopher Nolan", "year": 2010, "country": "USA", "genres": "Sci-Fi, Thriller, Action"},
+  {"title": "Interstellar", "director": "Christopher Nolan", "year": 2014, "country": "USA", "genres": "Sci-Fi, Drama"},
+  {"title": "Tenet", "director": "Christopher Nolan", "year": 2020, "country": "UK", "genres": "Sci-Fi, Action"},
+  {"title": "Dune", "director": "Denis Villeneuve", "year": 2021, "country": "USA", "genres": "Sci-Fi, Adventure"},
+  {"title": "Arrival", "director": "Denis Villeneuve", "year": 2016, "country": "USA", "genres": "Sci-Fi, Drama"},
+  {"title": "Prisoners", "director": "Denis Villeneuve", "year": 2013, "country": "USA", "genres": "Crime, Thriller"},
+  {"title": "Parasite", "director": "Bong Joon-ho", "year": 2019, "country": "South Korea", "genres": "Thriller, Drama, Comedy"},
+  {"title": "Memories of Murder", "director": "Bong Joon-ho", "year": 2003, "country": "South Korea", "genres": "Crime, Thriller, Drama"},
+  {"title": "Spirited Away", "director": "Hayao Miyazaki", "year": 2001, "country": "Japan", "genres": "Animation, Fantasy"},
+  {"title": "My Neighbor Totoro", "director": "Hayao Miyazaki", "year": 1988, "country": "Japan", "genres": "Animation, Family"},
+  {"title": "Lady Bird", "director": "Greta Gerwig", "year": 2017, "country": "USA", "genres": "Comedy, Drama"},
+  {"title": "Little Women", "director": "Greta Gerwig", "year": 2019, "country": "USA", "genres": "Drama, Romance"},
+  {"title": "Pulp Fiction", "director": "Quentin Tarantino", "year": 1994, "country": "USA", "genres": "Crime, Drama"},
+  {"title": "The Grand Budapest Hotel", "director": "Wes Anderson", "year": 2014, "country": "Germany", "genres": "Comedy, Adventure"},
+  {"title": "Lost in Translation", "director": "Sofia Coppola", "year": 2003, "country": "USA", "genres": "Drama, Romance"},
+  {"title": "Oldboy", "director": "Park Chan-wook", "year": 2003, "country": "South Korea", "genres": "Thriller, Mystery"},
+  {"director": "Christopher Nolan", "year": 2008, "country": "USA", "genres": "Action, Crime"}
+]

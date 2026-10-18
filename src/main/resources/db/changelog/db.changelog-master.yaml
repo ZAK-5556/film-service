@@ -1,0 +1,97 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-director
+      author: film-service
+      changes:
+        - createTable:
+            tableName: director
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+                    uniqueConstraintName: uq_director_name
+
+  - changeSet:
+      id: 2-create-film
+      author: film-service
+      changes:
+        - createTable:
+            tableName: film
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: release_year
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: country
+                  type: VARCHAR(100)
+              - column:
+                  name: genres
+                  type: VARCHAR(300)
+              - column:
+                  name: director_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_film_director
+                    references: director(id)
+
+  - changeSet:
+      id: 3-film-filter-indexes
+      author: film-service
+      comment: Indexes for the fields used by /api/film/_list and /_report filters
+      changes:
+        - createIndex:
+            tableName: film
+            indexName: idx_film_director_id
+            columns:
+              - column:
+                  name: director_id
+        - createIndex:
+            tableName: film
+            indexName: idx_film_release_year
+            columns:
+              - column:
+                  name: release_year
+        - createIndex:
+            tableName: film
+            indexName: idx_film_country
+            columns:
+              - column:
+                  name: country
+
+  - changeSet:
+      id: 4-seed-directors
+      author: film-service
+      changes:
+        - insert: {tableName: director, columns: [{column: {name: name, value: "Christopher Nolan"}}]}
+        - insert: {tableName: director, columns: [{column: {name: name, value: "Denis Villeneuve"}}]}
+        - insert: {tableName: director, columns: [{column: {name: name, value: "Bong Joon-ho"}}]}
+        - insert: {tableName: director, columns: [{column: {name: name, value: "Hayao Miyazaki"}}]}
+        - insert: {tableName: director, columns: [{column: {name: name, value: "Greta Gerwig"}}]}
+        - insert: {tableName: director, columns: [{column: {name: name, value: "Quentin Tarantino"}}]}
+        - insert: {tableName: director, columns: [{column: {name: name, value: "Wes Anderson"}}]}
+        - insert: {tableName: director, columns: [{column: {name: name, value: "Sofia Coppola"}}]}
